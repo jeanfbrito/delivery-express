@@ -11,7 +11,6 @@
     <thead>
       <tr>
             <th>Name</th>
-            <th>Ng</th>
             <th>Corporate name</th>
             <th>Cnpj</th>
             <th>Phone</th>
@@ -32,7 +31,6 @@
     <tbody>
       <%= content_tag_for(:tr, @clients) do |client| %>
             <td><%= client.name %></td>
-            <td><%= client.ng %></td>
             <td><%= client.corporate_name %></td>
             <td><%= client.cnpj %></td>
             <td><%= client.phone %></td>
