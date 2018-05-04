@@ -1,0 +1,26 @@
+<div class="page-header">
+  <%= link_to sales_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_sale_path(@sale), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show sale</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Client:</dt>
+  <dd><%= @sale.client %></dd>
+
+  <dt>Product:</dt>
+  <dd><%= @sale.product %></dd>
+
+  <dt>Price:</dt>
+  <dd><%= @sale.price %></dd>
+
+  <dt>Average amount:</dt>
+  <dd><%= @sale.average_amount %></dd>
+
+</dl>
