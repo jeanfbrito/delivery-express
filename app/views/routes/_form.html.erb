@@ -1,0 +1,38 @@
+<%= simple_form_for(@route, html: { class: "form-horizontal", role: "form" }) do |f| %>
+  <% if @route.errors.any? %>
+    <div class="alert alert-danger alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <h4><%= pluralize(@route.errors.count, "error") %> prohibited this route from being saved:</h4>
+
+      <ul>
+      <% @route.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+  </div>
+
+  <div class="col-md-offset-2 col-md-10 text-center">
+    <h3>Clients (add the clients for this route)</h3>
+    <div id="route_clients">
+      <%= f.simple_fields_for :route_clients do |route_client| %>
+        <%= render 'route_client_fields', f: route_client %>
+      <% end %>
+      <div class="links col-md-12">
+        <%= link_to_add_association 'Add Client', f, :route_clients, class: 'btn btn-success' %>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

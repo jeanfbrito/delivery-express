@@ -1,0 +1,20 @@
+<div class="page-header">
+  <%= link_to route_clients_path, class: 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_route_client_path(@route_client), class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show route_client</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Route:</dt>
+  <dd><%= @route_client.route %></dd>
+
+  <dt>Client:</dt>
+  <dd><%= @route_client.client %></dd>
+
+</dl>

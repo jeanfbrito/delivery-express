@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_05_040341) do
+ActiveRecord::Schema.define(version: 2018_05_05_164909) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -69,6 +69,21 @@ ActiveRecord::Schema.define(version: 2018_05_05_040341) do
     t.float "cost"
     t.float "price_nf"
     t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "route_clients", force: :cascade do |t|
+    t.integer "route_id"
+    t.integer "client_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["client_id"], name: "index_route_clients_on_client_id"
+    t.index ["route_id"], name: "index_route_clients_on_route_id"
+  end
+
+  create_table "routes", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

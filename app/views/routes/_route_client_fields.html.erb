@@ -1,0 +1,11 @@
+
+<div class="nested-fields panel panel-default">
+  <div class="panel-body">
+    <div class="">
+      <div class="product_from_list">
+        <%= f.association :client, collection: Client.all.order(:name), :prompt => 'Choose a client' %>
+      </div>
+      <%= link_to_remove_association 'Remove Client', f %>
+    </div>
+  </div>
+</div>

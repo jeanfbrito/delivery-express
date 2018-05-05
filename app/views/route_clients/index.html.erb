@@ -1,0 +1,31 @@
+<div class="page-header">
+  <%= link_to new_route_client_path, class: 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Route client
+  <% end %>
+  <h1>Listing route_clients</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Route</th>
+            <th>Client</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @route_clients) do |route_client| %>
+            <td><%= route_client.route %></td>
+            <td><%= route_client.client %></td>
+            <td><%= link_to 'Show', route_client %></td>
+        <td><%= link_to 'Edit', edit_route_client_path(route_client) %></td>
+        <td><%= link_to 'Destroy', route_client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
