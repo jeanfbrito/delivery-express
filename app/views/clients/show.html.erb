@@ -46,5 +46,33 @@
 
   <dt>Gstreet link:</dt>
   <dd><%= @client.gstreet_link %></dd>
+  <hr>
+  <h4>Contacts</h4>
+  <% @client.contacts.each do |contact| %>
+    <dt>Name:</dt>
+    <dd><%= contact.name %></dd>
+
+    <dt>Role:</dt>
+    <dd><%= contact.role %></dd>
+
+    <dt>Phone:</dt>
+    <dd><%= contact.phone %></dd>
+    <br>
+  <% end %>
+
+  <hr>
+  <h4>Products</h4>
+  <% @client.sales.each do |sale| %>
+    <dt>Name:</dt>
+    <dd><%= sale.product.name %></dd>
+
+    <dt>Price:</dt>
+    <dd><%= sale.price %></dd>
+
+    <dt>Weekly Amount:</dt>
+    <dd><%= sale.average_amount %></dd>
+    <br>
+  <% end %>
+
 
 </dl>

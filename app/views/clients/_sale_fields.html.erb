@@ -1,0 +1,13 @@
+
+<div class="panel panel-default col-md-4">
+  <div class="panel-body">
+    <div class="nested-fields sales-fields">
+      <div class="product_from_list">
+        <%= f.association :product, collection: Product.all.order(:name), :prompt => 'Choose a product' %>
+      </div>
+      <%= f.input :price %>
+      <%= f.input :average_amount %>
+      <%= link_to_remove_association 'Remove product', f %>
+    </div>
+  </div>
+</div>
