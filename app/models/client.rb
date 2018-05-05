@@ -6,4 +6,6 @@ class Client < ApplicationRecord
   
   accepts_nested_attributes_for :products
   accepts_nested_attributes_for :sales
+  has_one_attached :front_picture
+  has_one_attached :delivery_entry_picture
 end

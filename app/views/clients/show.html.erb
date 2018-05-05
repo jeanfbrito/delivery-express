@@ -46,6 +46,14 @@
 
   <dt>Gstreet link:</dt>
   <dd><%= @client.gstreet_link %></dd>
+  
+  <div class="container">
+    <dt>Front Picture:</dt>
+    <dd class="col-md-4"><img src="<%= url_for(@client.front_picture) %>" alt="..." class="img-thumbnail"></dd>
+    <hr class="col-md-12">
+    <dt>Delivery Entry:</dt>
+    <dd class="col-md-4"><img src="<%= url_for(@client.delivery_entry_picture) %>" alt="..." class="img-thumbnail"></dd>
+  </div>
   <hr>
   <h4>Contacts</h4>
   <% @client.contacts.each do |contact| %>

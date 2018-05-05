@@ -84,6 +84,18 @@
       <%= f.text_field :gstreet_link, class: "form-control" %>
     </div>
   </div>
+  <div class="form-group">
+    <%= f.label :front_picture, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.file_field :front_picture, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :delivery_entry_picture, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.file_field :delivery_entry_picture, class: "form-control" %>
+    </div>
+  </div>
   <div class="col-md-offset-2 col-md-10 text-center">
     <h3>Contacts (add the contacts in the client)</h3>
     <div id="contacts">
