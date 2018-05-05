@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_04_234311) do
+ActiveRecord::Schema.define(version: 2018_05_05_031429) do
 
   create_table "clients", force: :cascade do |t|
     t.string "name"
@@ -27,6 +27,10 @@ ActiveRecord::Schema.define(version: 2018_05_04_234311) do
     t.string "gstreet_link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "lat", precision: 10, scale: 6
+    t.decimal "lng", precision: 10, scale: 6
+    t.decimal "parking_lat", precision: 10, scale: 6
+    t.decimal "parking_lng", precision: 10, scale: 6
   end
 
   create_table "contacts", force: :cascade do |t|
