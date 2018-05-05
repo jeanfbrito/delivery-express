@@ -31,9 +31,14 @@
                 <%= client.district %>
               <b> Cidade: </b>
                 <%= client.city %>
-              <a target="_blank" href="<%= "https://maps.google.com/?q=#{client.lat},#{client.lng}" %>">Maps</a>
           </td>
           <td class="col-md-4">
+            <% if client.lat %>
+              <a target="_blank" href="<%= "https://maps.google.com/?q=#{client.lat},#{client.lng}" %>" class="btn btn-success btn-xs"> <i class="fa fa-external-link" aria-hidden="true"></i> Maps</a>
+            <% end %>
+            <% if client.gstreet_link? %>
+              <a target="_blank" href="<%= client.gstreet_link %>" class="btn btn-success btn-xs"> <i class="fa fa-external-link" aria-hidden="true"></i> Street View</a>
+            <% end %>
             <br>
             <b> Telefone: </b>
               <%= client.phone %>
