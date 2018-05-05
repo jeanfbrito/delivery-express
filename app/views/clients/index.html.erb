@@ -21,7 +21,7 @@
             <th>Best hours</th>
             <th>Delivery hours</th>
             <th>Receipt</th>
-            <th>Gstreet link</th>
+            <th>Local</th>
             <th></th>
         <th></th>
         <th></th>
@@ -41,7 +41,7 @@
             <td><%= client.best_hours %></td>
             <td><%= client.delivery_hours %></td>
             <td><%= client.receipt %></td>
-            <td><%= client.gstreet_link %></td>
+            <td><a target="_blank" href="<%= "https://maps.google.com/?q=#{client.lat},#{client.lng}" %>">Maps</a></td>
             <td><%= link_to 'Show', client %></td>
         <td><%= link_to 'Edit', edit_client_path(client) %></td>
         <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
