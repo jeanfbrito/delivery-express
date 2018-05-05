@@ -1,4 +1,4 @@
-<%= simple_form_for(@client, html: { class: "form-horizontal", role: "form" }) do |f| %>
+<%= simple_form_for(@client, html: { class: "form-inline", role: "form" }) do |f| %>
   <% if @client.errors.any? %>
     <div class="alert alert-danger alert-dismissable" role="alert">
       <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
@@ -12,112 +12,115 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= f.label :name, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :name, class: "form-control" %>
+  <div class="form-group col-md-3">
+    <%= f.label :name, class: "control-label" %>
+    <div class="">
+      <%= f.text_field :name, class: "form-control", style: "width: 100%;" %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :corporate_name, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :corporate_name, class: "form-control" %>
+  <div class="form-group col-md-5">
+    <%= f.label :corporate_name, class: "control-label" %>
+    <div class="">
+      <%= f.text_field :corporate_name, class: "form-control", style: "width: 100%;" %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :cnpj, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :cnpj, class: "form-control" %>
+  <div class="form-group col-md-2">
+    <%= f.label :cnpj, class: "control-label" %>
+    <div class="">
+      <%= f.text_field :cnpj, class: "form-control", style: "width: 100%;" %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :phone, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :phone, class: "form-control" %>
+  <div class="form-group col-md-2">
+    <%= f.label :receipt, class: "control-label" %>
+    <div class="">
+      <%= f.check_box :receipt, class: "form-control", style: "height: 30px; width: 100%;" %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :address, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :address, class: "form-control" %>
+  <hr class="col-md-12">
+  <div class="form-group col-md-3">
+    <%= f.label :address, class: "control-label" %>
+    <div class="">
+      <%= f.text_field :address, class: "form-control", style: "width: 100%;" %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :district, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :district, class: "form-control" %>
+  <div class="form-group col-md-2">
+    <%= f.label :district, class: "control-label" %>
+    <div class="">
+      <%= f.text_field :district, class: "form-control", style: "width: 100%;" %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :city, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :city, class: "form-control" %>
+  <div class="form-group col-md-2">
+    <%= f.label :city, class: "control-label" %>
+    <div class="">
+      <%= f.text_field :city, class: "form-control", style: "width: 100%;" %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :email, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :email, class: "form-control" %>
+  <div class="form-group col-md-2">
+    <%= f.label :phone, class: "control-label" %>
+    <div class="">
+      <%= f.text_field :phone, class: "form-control", style: "width: 100%;" %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :best_hours, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :best_hours, class: "form-control" %>
+  <div class="form-group col-md-3">
+    <%= f.label :email, class: "control-label" %>
+    <div class="">
+      <%= f.text_field :email, class: "form-control", style: "width: 100%;" %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :delivery_hours, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :delivery_hours, class: "form-control" %>
+  <hr class="col-md-12">
+  <div class="form-group col-md-4">
+    <%= f.label :gstreet_link, class: "control-label" %>
+    <div class="">
+      <%= f.text_field :gstreet_link, class: "form-control", style: "width: 100%;" %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :receipt, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.check_box :receipt, class: "form-control" %>
+  <div class="form-group col-md-2">
+    <%= f.label :lat, class: "control-label" %>
+    <div class="">
+      <%= f.text_field :lat, class: "form-control", style: "width: 100%;" %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :gstreet_link, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :gstreet_link, class: "form-control" %>
+  <div class="form-group col-md-2">
+    <%= f.label :lng, class: "control-label" %>
+    <div class="">
+      <%= f.text_field :lng, class: "form-control", style: "width: 100%;" %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :lat, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :lat, class: "form-control" %>
+  <div class="form-group col-md-4">
+    <%= f.label :front_picture, class: "control-label" %>
+    <div class="">
+      <%= f.file_field :front_picture, class: "form-control", style: "width: 100%;" %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :lng, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :lng, class: "form-control" %>
+  <hr class="col-md-12">
+  <div class="form-group col-md-2">
+    <%= f.label :best_hours, class: "control-label" %>
+    <div class="">
+      <%= f.text_field :best_hours, class: "form-control", style: "width: 100%;" %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :parking_lat, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :parking_lat, class: "form-control" %>
+  <div class="form-group col-md-2">
+    <%= f.label :delivery_hours, class: "control-label" %>
+    <div class="">
+      <%= f.text_field :delivery_hours, class: "form-control", style: "width: 100%;" %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :parking_lng, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.text_field :parking_lng, class: "form-control" %>
+  <div class="form-group col-md-2">
+    <%= f.label :parking_lat, class: "control-label" %>
+    <div class="">
+      <%= f.text_field :parking_lat, class: "form-control", style: "width: 100%;" %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :front_picture, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.file_field :front_picture, class: "form-control" %>
+  <div class="form-group col-md-2">
+    <%= f.label :parking_lng, class: "control-label" %>
+    <div class="">
+      <%= f.text_field :parking_lng, class: "form-control", style: "width: 100%;" %>
     </div>
   </div>
-  <div class="form-group">
-    <%= f.label :delivery_entry_picture, class: "col-sm-2 control-label" %>
-    <div class="col-sm-10">
-      <%= f.file_field :delivery_entry_picture, class: "form-control" %>
+  <div class="form-group col-md-4">
+    <%= f.label :delivery_entry_picture, class: "control-label" %>
+    <div class="">
+      <%= f.file_field :delivery_entry_picture, class: "form-control", style: "width: 100%;" %>
     </div>
   </div>
   <div class="col-md-offset-2 col-md-10 text-center">
@@ -142,8 +145,8 @@
       </div>
     </div>
   </div>
-  <div class="form-group">
-    <div class="col-sm-offset-2 col-sm-10">
+  <div class="form-group col-md-12">
+    <div class="col-sm-offset-2">
       <%= f.submit class: "btn btn-primary" %>
     </div>
   </div>
