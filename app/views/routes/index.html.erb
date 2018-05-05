@@ -11,6 +11,7 @@
     <thead>
       <tr>
             <th>Name</th>
+            <th>Clients count</th>
             <th></th>
         <th></th>
         <th></th>
@@ -20,6 +21,7 @@
     <tbody>
       <%= content_tag_for(:tr, @routes) do |route| %>
             <td><%= route.name %></td>
+            <td><%= route.clients.count %></td>
             <td><%= link_to 'Show', route %></td>
         <td><%= link_to 'Edit', edit_route_path(route) %></td>
         <td><%= link_to 'Destroy', route, method: :delete, data: { confirm: 'Are you sure?' } %></td>
