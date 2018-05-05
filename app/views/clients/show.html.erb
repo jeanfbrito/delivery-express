@@ -7,13 +7,10 @@
     <span class="glyphicon glyphicon-pencil"></span>
     Edit
   <% end %>
-  <h1>Show client</h1>
+  <h1><%= @client.name %></h1>
 </div>
 
 <dl class="dl-horizontal">
-  <dt>Name:</dt>
-  <dd><%= @client.name %></dd>
-
   <dt>Corporate name:</dt>
   <dd><%= @client.corporate_name %></dd>
 
@@ -45,8 +42,14 @@
   <dd><%= @client.receipt %></dd>
 
   <dt>Gstreet link:</dt>
-  <dd><%= @client.gstreet_link %></dd>
-  
+  <dd><a target="_blank" href="<%= @client.gstreet_link %>">Abrir no Google Street</a></dd>
+
+  <dt>Latitude/Longitude:</dt>
+  <dd><%= "#{@client.lat},#{@client.lng}" %><a target="_blank" href="<%= "https://maps.google.com/?q=#{@client.lat},#{@client.lng}" %>">  <i class="fa fa-external-link" aria-hidden="true"></i> Abrir no Google Maps</a></dd>
+
+  <dt>Parking Local:</dt>
+  <dd><%= "#{@client.parking_lat},#{@client.parking_lng}" %><a target="_blank" href="<%= "https://maps.google.com/?q=#{@client.parking_lat},#{@client.parking_lng}" %>">  <i class="fa fa-external-link" aria-hidden="true"></i> Abrir no Google Maps</a></dd>
+
   <div class="container">
     <dt>Front Picture:</dt>
     <dd class="col-md-4"><img src="<%= url_for(@client.front_picture) %>" alt="..." class="img-thumbnail"></dd>
@@ -54,6 +57,7 @@
     <dt>Delivery Entry:</dt>
     <dd class="col-md-4"><img src="<%= url_for(@client.delivery_entry_picture) %>" alt="..." class="img-thumbnail"></dd>
   </div>
+
   <hr>
   <h4>Contacts</h4>
   <% @client.contacts.each do |contact| %>
