@@ -39,6 +39,7 @@ gem 'font-awesome-sass', '~> 5.0.9'
 gem 'simple_form'
 gem 'bootstrap-generators', '~> 3.3.4'
 gem 'record_tag_helper', '~> 1.0'
+gem "cocoon"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
