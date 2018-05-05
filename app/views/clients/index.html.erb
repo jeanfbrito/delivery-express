@@ -9,7 +9,8 @@
 <div class="table-responsive">
   <table class="table table-striped table-bordered table-hover">
     <thead>
-      <tr>
+      <tr>  
+            <th>Picture</th>
             <th>Name</th>
             <th>Corporate name</th>
             <th>Cnpj</th>
@@ -30,6 +31,7 @@
 
     <tbody>
       <%= content_tag_for(:tr, @clients) do |client| %>
+            <td><img src="<%= url_for(client.front_picture) if client.front_picture.attached? %>" alt="..." style="width: 100px;"></td>
             <td><%= client.name %></td>
             <td><%= client.corporate_name %></td>
             <td><%= client.cnpj %></td>
