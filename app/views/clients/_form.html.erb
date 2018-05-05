@@ -84,13 +84,13 @@
       <%= f.text_field :gstreet_link, class: "form-control" %>
     </div>
   </div>
-  <div class="col-md-offset-4 col-md-6 text-center">
+  <div class="col-md-offset-2 col-md-10 text-center">
     <h3>Contacts (add the contacts in the client)</h3>
     <div id="contacts">
-      <%= f.simple_fields_for :contacts, render_options: { wrapper: 'inline' } do |contact| %>
+      <%= f.simple_fields_for :contacts do |contact| %>
         <%= render 'contact_fields', f: contact %>
       <% end %>
-      <div class="links">
+      <div class="links col-md-12">
         <%= link_to_add_association 'Add Contact', f, :contacts, class: 'btn btn-success' %>
       </div>
     </div>
